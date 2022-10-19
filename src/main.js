@@ -9,6 +9,9 @@ function setCardType(type) {
     const colors = {
         visa: ["#436D99", "#2D57F2"],
         mastercard: ["#DF6F29", "#C69347"],
+        americanExpress: ["#FFFFFF","#16084C"],
+        discover: ["#D815F3", "#42D3FF"],
+        diners: ["#4C0C08", "#599943"],
         default: ["black", "gray"],
     }
 
@@ -17,7 +20,7 @@ function setCardType(type) {
     ccLogo.setAttribute("src", `cc-${type}.svg`)
 }
 
-//setCardType("visa")
+//setCardType("diners")
 globalThis.setCardType = setCardType
 
 const securityCode = document.querySelector("#security-code")
@@ -62,7 +65,7 @@ const cardNumberPattern = {
         {
             mask: '0000 000000 00000',
             regex: /^3[47]\d{0,13}/,
-            cardtype: 'american express'
+            cardtype: 'americanExpress'
         },
         {
             mask: '0000 0000 0000 0000',
