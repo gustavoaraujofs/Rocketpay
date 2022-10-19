@@ -60,6 +60,21 @@ const cardNumberPattern = {
             cardType: "mastercard",
         },
         {
+            mask: '0000 000000 00000',
+            regex: /^3[47]\d{0,13}/,
+            cardtype: 'american express'
+        },
+        {
+            mask: '0000 0000 0000 0000',
+            regex: /^(?:6011|65\d{0,2}|64[4-9]\d?)\d{0,12}/,
+            cardtype: 'discover'
+        },
+        {
+            mask: '0000 000000 0000',
+            regex: /^3(?:0([0-5]|9)|[689]\d?)\d{0,11}/,
+            cardtype: 'diners'
+        },
+        {
             mask: "0000 0000 0000 0000",
             cardType: "default",
         },
